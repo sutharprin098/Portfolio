@@ -579,6 +579,94 @@
         font-size: 0.9rem;
     }
 
+    /* --- Contact Section --- */
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 30px;
+    }
+
+    .contact-card {
+        background: var(--card-bg-solid);
+        padding: 30px;
+        border-radius: 20px;
+        border: 1px solid var(--border-color);
+        box-shadow: 0 12px 30px var(--shadow-color);
+    }
+
+    .contact-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 14px;
+        color: var(--subtext-color);
+    }
+
+    .contact-list li {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .contact-list i {
+        color: var(--accent-color);
+        font-size: 1.1rem;
+    }
+
+    .contact-form {
+        display: grid;
+        gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 14px 16px;
+        border-radius: 12px;
+        border: 1px solid var(--border-color);
+        background: var(--bg-color);
+        color: var(--text-color);
+        font-size: 1rem;
+        outline: none;
+        transition: var(--transition);
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+        border-color: var(--accent-color);
+        box-shadow: 0 0 0 3px var(--accent-light);
+    }
+
+    .contact-form button {
+        padding: 14px 18px;
+        border: none;
+        border-radius: 12px;
+        background: var(--gradient);
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+    }
+
+    .contact-form button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 25px var(--shadow-light);
+    }
+
+    .form-status {
+        font-size: 0.95rem;
+        color: var(--subtext-color);
+    }
+
+    .form-status.success {
+        color: #22c55e;
+    }
+
+    .form-status.error {
+        color: #ef4444;
+    }
+
     /* --- Footer --- */
     footer {
         text-align: center;
@@ -756,9 +844,20 @@
         h2 {
             font-size: 2rem;
         }
+
+        .section-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .section-icon {
+            margin-right: 0;
+        }
         
         .card-grid {
             grid-template-columns: 1fr;
+            gap: 20px;
         }
         
         .contact-info {
@@ -775,6 +874,10 @@
         
         .section {
             margin-top: 80px;
+        }
+
+        .contact-grid {
+            grid-template-columns: 1fr;
         }
 
         .category-header {
@@ -814,6 +917,15 @@
         .project-img-container {
             height: 200px;
         }
+
+        .contact-form input,
+        .contact-form textarea {
+            font-size: 0.98rem;
+        }
+
+        .contact-form button {
+            width: 100%;
+        }
         
         .plugin-logo-container {
             width: 120px;
@@ -839,12 +951,33 @@
             padding: 25px;
         }
 
+        .section-header {
+            gap: 10px;
+        }
+
+        h2 {
+            font-size: 1.7rem;
+        }
+
+        .contact-card {
+            padding: 22px;
+        }
+
         .category-title {
             font-size: 1.25rem;
         }
 
         .project-img-container {
             height: 180px;
+        }
+
+        .contact-card {
+            padding: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 12px 14px;
         }
         
         .section-icon {
@@ -894,14 +1027,6 @@
     <p class="tagline">GIS analyst focused on spatial analysis, remote sensing, and web-based GIS solutions for planning, monitoring, and decision-making.</p>
     
     <div class="contact-info">
-        <div class="contact-item">
-            <i class="fas fa-map-marker-alt contact-icon"></i>
-            <span>Delhi, India</span>
-        </div>
-        <div class="contact-item">
-            <i class="fas fa-phone contact-icon"></i>
-            <span>+91-9509706699</span>
-        </div>
         <div class="contact-item">
             <i class="fas fa-envelope contact-icon"></i>
             <a href="mailto:prince@bramb.du.ac.in">prince@bramb.du.ac.in</a>
@@ -1065,7 +1190,7 @@
             <div class="card-grid">
                 <div class="card project-card">
                     <div class="project-img-container">
-                        <img src="groundwater.jpg" alt="Groundwater Analysis" class="project-img"
+                        <img src="Groundwater.jpg" alt="Groundwater Analysis" class="project-img"
                              onerror="this.src='https://images.unsplash.com/photo-1629731634863-7c706954203e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
                         <div class="project-overlay">
                             <div>
@@ -1087,7 +1212,7 @@
 
                 <div class="card project-card">
                     <div class="project-img-container">
-                        <img src="temperature.jpg" alt="Temperature Mapping" class="project-img"
+                        <img src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Temperature Mapping" class="project-img">
                              onerror="this.src='https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
                         <div class="project-overlay">
                             <div>
@@ -1119,7 +1244,7 @@
             <div class="card-grid">
                 <div class="card project-card">
                     <div class="project-img-container">
-                        <img src="lulc.jpg" alt="Satellite LULC" class="project-img"
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Satellite LULC" class="project-img">
                              onerror="this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
                         <div class="project-overlay">
                             <div>
@@ -1141,7 +1266,7 @@
 
                 <div class="card project-card">
                     <div class="project-img-container">
-                        <img src="webapp.jpg" alt="LULC Web Application" class="project-img"
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="LULC Web Application" class="project-img">
                              onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
                         <div class="project-overlay">
                             <div>
@@ -1163,7 +1288,7 @@
 
                 <div class="card project-card">
                     <div class="project-img-container">
-                        <img src="delhi-lulc.jpg" alt="Delhi LULC" class="project-img"
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Delhi LULC" class="project-img">
                              onerror="this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
                         <div class="project-overlay">
                             <div>
@@ -1173,8 +1298,8 @@
                         </div>
                     </div>
                     <h3>Delhi LULC Map</h3>
-                    <h4>1987 | Landsat-5</h4>
-                    <p>Prepared a historical LULC map using Landsat-5 imagery and supervised classification techniques in Google Earth Engine.</p>
+                    <h4>1987 | Landsat-2</h4>
+                    <p>Prepared a historical LULC map using Landsat-2 imagery and supervised classification techniques in Google Earth Engine.</p>
                     <div class="project-tags">
                         <span class="project-tag">LULC</span>
                         <span class="project-tag">Remote Sensing</span>
@@ -1217,7 +1342,7 @@
 
                 <div class="card project-card">
                     <div class="project-img-container">
-                        <img src="terrain.jpg" alt="3D & Contour Mapping" class="project-img"
+                        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="3D & Contour Mapping" class="project-img">
                              onerror="this.src='https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
                         <div class="project-overlay">
                             <div>
@@ -1249,7 +1374,7 @@
             <div class="card-grid">
                 <div class="card project-card">
                     <div class="project-img-container">
-                        <img src="chat.jpg" alt="Real-time Chat" class="project-img"
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Real-time Chat" class="project-img">
                              onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
                         <div class="project-overlay">
                             <div>
@@ -1271,7 +1396,7 @@
 
                 <div class="card project-card">
                     <div class="project-img-container">
-                        <img src="municipality.jpg" alt="Municipality GIS Dashboard" class="project-img"
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Municipality GIS Dashboard" class="project-img">
                              onerror="this.src='https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
                         <div class="project-overlay">
                             <div>
@@ -1293,7 +1418,7 @@
 
                 <div class="card project-card">
                     <div class="project-img-container">
-                        <img src="tourism.jpg" alt="Tourism Route Mapping" class="project-img"
+                        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tourism Route Mapping" class="project-img">
                              onerror="this.src='https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
                         <div class="project-overlay">
                             <div>
@@ -1384,10 +1509,40 @@
             </div>
         </div>
     </section>
+
+    <!-- Contact -->
+    <section class="section fade-in" id="contact">
+        <div class="section-header">
+            <div class="section-icon">
+                <i class="fas fa-paper-plane"></i>
+            </div>
+            <h2>Contact</h2>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h3 style="margin-bottom: 15px;">Get in touch</h3>
+                <p style="color: var(--subtext-color); margin-bottom: 20px;">
+                    Send your message and it will reach me via email.
+                </p>
+                <ul class="contact-list">
+                    <li><i class="fas fa-envelope"></i> prince@bramb.du.ac.in</li>
+                </ul>
+            </div>
+            <div class="contact-card">
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/xnjzngpb" method="POST">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" rows="5" placeholder="Write your message" required></textarea>
+                    <button type="submit"><i class="fas fa-paper-plane" style="margin-right: 8px;"></i>Send Message</button>
+                    <div class="form-status" id="formStatus"></div>
+                </form>
+            </div>
+        </div>
+    </section>
 </div>
 
 <!-- Footer -->
-<footer class="fade-in" id="contact">
+<footer class="fade-in" id="footer">
     <h2 style="color: var(--heading-color); margin-bottom: 25px; font-size: 2.5rem;">Let's Connect</h2>
     <p style="max-width: 600px; margin: 0 auto 40px; font-size: 1.2rem; line-height: 1.8;">
         Interested in collaborating on geospatial projects, discussing GIS solutions, or exploring research opportunities? Feel free to reach out!
@@ -1396,9 +1551,6 @@
     <div class="social-links">
         <a href="https://www.linkedin.com/in/prince-suthar-79552428a" target="_blank" class="social-link" title="LinkedIn">
             <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://www.upwork.com/freelancers/~01ea0fa9615ea38b33?mp_source=share" target="_blank" class="social-link" title="Upwork">
-            <i class="fab fa-upwork"></i>
         </a>
         <a href="https://github.com/sutharprin098" target="_blank" class="social-link" title="GitHub">
             <i class="fab fa-github"></i>
@@ -1414,7 +1566,7 @@
     <div class="copyright">
         <p>© 2026 Prince | GIS Analyst | WebApp Creator | Graphic Designer</p>
         <p style="margin-top: 15px; font-size: 0.9rem;">Built with <i class="fas fa-heart" style="color: var(--accent-color);"></i> using modern web technologies</p>
-        <p style="margin-top: 10px; font-size: 0.85rem; opacity: 0.7;">Phone: +91-9509706699 | Email: prince@bramb.du.ac.in</p>
+        <p style="margin-top: 10px; font-size: 0.85rem; opacity: 0.7;">Email: prince@bramb.du.ac.in</p>
     </div>
 </footer>
 
@@ -1429,8 +1581,7 @@
     const darkImage = 'img.png'; // Dark theme image
     const lightImage = 'img1.jpg'; // Light theme image
     
-    // Check for saved theme or prefer-color-scheme
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    // Check for saved theme
     const currentTheme = localStorage.getItem('theme');
     
     function setTheme(isLight) {
@@ -1457,11 +1608,11 @@
         }
     }
     
-    // Initialize theme
-    if (currentTheme === 'light' || (!currentTheme && !prefersDarkScheme.matches)) {
-        setTheme(true);
-    } else {
+    // Initialize theme (default to light on first load)
+    if (currentTheme === 'dark') {
         setTheme(false);
+    } else {
+        setTheme(true);
     }
     
     // Toggle theme on button click
@@ -1531,6 +1682,42 @@
             }
         });
     });
+
+    // Contact Form (Formspree) - prevent full page reload
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            formStatus.textContent = 'Sending...';
+            formStatus.className = 'form-status';
+
+            try {
+                const formData = new FormData(contactForm);
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    formStatus.textContent = 'Message sent successfully.';
+                    formStatus.className = 'form-status success';
+                    contactForm.reset();
+                } else {
+                    formStatus.textContent = 'Something went wrong. Please try again.';
+                    formStatus.className = 'form-status error';
+                }
+            } catch (error) {
+                formStatus.textContent = 'Network error. Please try again.';
+                formStatus.className = 'form-status error';
+            }
+        });
+    }
+
     
     // Add hover effect to project cards
     document.querySelectorAll('.project-card').forEach(card => {
