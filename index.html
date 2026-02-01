@@ -82,7 +82,11 @@
         margin: 0 auto;
         padding: 0 20px 60px;
     }
-
+    .plugin-box-link {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+    }
     /* --- Header --- */
     header {
         text-align: center;
@@ -301,6 +305,38 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    /* --- Project Categories --- */
+    .category-block {
+        margin: 10px 0 60px;
+    }
+
+    .category-header {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin: 10px 0 25px;
+    }
+
+    .category-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: var(--accent-light);
+        color: var(--accent-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        border: 1px solid var(--border-color);
+    }
+
+    .category-title {
+        font-size: 1.6rem;
+        color: var(--heading-color);
+        font-weight: 700;
+        font-family: 'Poppins', sans-serif;
     }
 
     /* --- Cards --- */
@@ -740,6 +776,17 @@
         .section {
             margin-top: 80px;
         }
+
+        .category-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .category-title {
+            font-size: 1.4rem;
+            line-height: 1.4;
+        }
         
         .theme-btn {
             top: 20px;
@@ -762,6 +809,10 @@
         
         .plugin-box {
             padding: 30px;
+        }
+
+        .project-img-container {
+            height: 200px;
         }
         
         .plugin-logo-container {
@@ -786,6 +837,14 @@
         
         .card, .plugin-box {
             padding: 25px;
+        }
+
+        .category-title {
+            font-size: 1.25rem;
+        }
+
+        .project-img-container {
+            height: 180px;
         }
         
         .section-icon {
@@ -832,7 +891,7 @@
     
     <h1>Prince</h1>
     <p class="subtitle">GIS Analyst | WebApp Creator | Graphic Designer</p>
-    <p class="tagline">Transforming spatial data into actionable insights through innovative mapping solutions, web applications, and data visualization</p>
+    <p class="tagline">GIS analyst focused on spatial analysis, remote sensing, and web-based GIS solutions for planning, monitoring, and decision-making.</p>
     
     <div class="contact-info">
         <div class="contact-item">
@@ -865,9 +924,7 @@
         </div>
         <div class="card">
             <p style="font-size: 1.15rem; line-height: 1.9;">
-                Passionate GIS Analyst and App Creator with hands-on experience in GIS analysis, remote sensing, and web-based applications. 
-                Skilled in QGIS, Google Earth Engine, spatial analysis, and terrain modelling. 
-                Dedicated to environmental sustainability, climate studies, and creating innovative tools for smarter decision-making.
+                GIS Analyst, Web Application Creator, and Graphic Designer with strong hands-on experience in GIS analysis, remote sensing, and web-based GIS applications. Proficient in QGIS, Google Earth Engine, spatial analysis, LULC mapping, and terrain modeling. Worked on diverse projects including groundwater depletion analysis, illegal borewell hotspot mapping, municipal GIS dashboards, tourism route mapping, and real-time web GIS applications. Strong interest in environmental sustainability, climate studies, and the application of GIS for planning, monitoring, and decision-making.
             </p>
             <div class="project-tags" style="margin-top: 25px;">
                 <span class="project-tag"><i class="fas fa-globe-asia"></i> Geospatial Analysis</span>
@@ -888,14 +945,13 @@
             <h2>Education</h2>
         </div>
         <div class="card">
-            <h3>B.A. (Hons.) Geography</h3>
+            <h3>B.A. (Hons.) Geography | 3rd Year</h3>
             <h4>Dr. Bhim Rao Ambedkar College, University of Delhi</h4>
-            <p>Currently in 3rd Year with specialized coursework in GIS, Remote Sensing, Environmental Geography, Spatial Analysis, and Cartography. Actively engaged in research projects applying geospatial technologies to real-world challenges.</p>
+            <p>Relevant coursework: GIS, Remote Sensing, Environmental Geography. Actively engaged in research projects applying geospatial technologies to real-world challenges.</p>
             <div class="project-tags" style="margin-top: 20px;">
-                <span class="project-tag">GIS & Remote Sensing</span>
+                <span class="project-tag">GIS</span>
+                <span class="project-tag">Remote Sensing</span>
                 <span class="project-tag">Environmental Geography</span>
-                <span class="project-tag">Spatial Analysis</span>
-                <span class="project-tag">Cartography</span>
             </div>
         </div>
     </section>
@@ -912,73 +968,83 @@
             <div class="card">
                 <h3><i class="fas fa-globe-asia" style="color: var(--accent-color); margin-right: 10px;"></i> GIS & Spatial Analysis</h3>
                 <ul>
-                    <li>QGIS & ArcGIS Pro</li>
-                    <li>Google Earth Engine (GEE)</li>
-                    <li>Spatial Analysis & Hotspot Mapping</li>
-                    <li>Buffer & Network Analysis</li>
-                    <li>Spatial Database Management</li>
+                    <li>QGIS, Google Earth Engine (GEE)</li>
+                    <li>Spatial Analysis, Buffer & Hotspot Mapping</li>
+                    <li>GIS workflows for planning and monitoring</li>
                 </ul>
             </div>
             <div class="card">
                 <h3><i class="fas fa-satellite" style="color: var(--accent-color); margin-right: 10px;"></i> Remote Sensing</h3>
                 <ul>
-                    <li>LULC Classification & Change Detection</li>
-                    <li>NDVI, NDBI, NDWI Indices</li>
+                    <li>LULC Classification</li>
+                    <li>NDVI, NDBI, NDWI</li>
                     <li>Satellite Data Interpretation</li>
-                    <li>Multi-spectral & Hyperspectral Analysis</li>
-                    <li>Image Processing & Enhancement</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-mountain" style="color: var(--accent-color); margin-right: 10px;"></i> Terrain, Hydrology & Modelling</h3>
+                <ul>
+                    <li>DEM, Contour & 3D Mapping</li>
+                    <li>Flood Simulation (HEC-RAS)</li>
+                    <li>Terrain modeling & visualization</li>
                 </ul>
             </div>
             <div class="card">
                 <h3><i class="fas fa-code" style="color: var(--accent-color); margin-right: 10px;"></i> Web & Applied GIS</h3>
                 <ul>
-                    <li>Web-based GIS Dashboards</li>
-                    <li>Interactive Mapping (Leaflet/Mapbox)</li>
-                    <li>HTML5, CSS3, JavaScript (ES6+)</li>
-                    <li>Python for Geospatial Analysis</li>
-                    <li>REST APIs & GeoJSON</li>
+                    <li>Web-based GIS Applications & Dashboards</li>
+                    <li>Interactive Mapping & Route Visualization</li>
+                    <li>HTML, CSS, JavaScript (Basic)</li>
+                    <li>Real-time web GIS applications</li>
                 </ul>
             </div>
             <div class="card">
-                <h3><i class="fas fa-mountain" style="color: var(--accent-color); margin-right: 10px;"></i> Terrain & Design</h3>
+                <h3><i class="fas fa-leaf" style="color: var(--accent-color); margin-right: 10px;"></i> Climate & Environmental Analysis</h3>
                 <ul>
-                    <li>DEM, Contour & 3D Mapping</li>
-                    <li>Flood Simulation (HEC-RAS)</li>
-                    <li>Map Layout & Graphic Design</li>
-                    <li>Data Visualization & Infographics</li>
-                    <li>3D Visualization & Modeling</li>
+                    <li>Groundwater Depletion & Illegal Borewell Hotspot Mapping</li>
+                    <li>Climate Change & Environmental Sustainability</li>
+                    <li>Environmental monitoring and analysis</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-pen-nib" style="color: var(--accent-color); margin-right: 10px;"></i> Design, Visualization & Tools</h3>
+                <ul>
+                    <li>Map Layout Design & Data Visualization</li>
+                    <li>Graphic Design</li>
+                    <li>Google Earth Pro</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Featured QGIS Plugin -->
+    <!-- Featured Plugin -->
     <section class="section fade-in" id="plugin">
         <div class="section-header">
             <div class="section-icon">
                 <i class="fas fa-plug"></i>
             </div>
-            <h2>Featured QGIS Plugin</h2>
+            <h2>Featured Plugin</h2>
         </div>
-        <div class="plugin-box">
-            <div class="plugin-logo-container">
-                <img src="logo.png" alt="Plugin Logo" class="plugin-logo" 
-                     onerror="this.src='https://cdn-icons-png.flaticon.com/512/3176/3176366.png'">
-            </div>
-            <div class="plugin-content">
-                <h3>One Click Thematic Map <i class="fas fa-map-marked-alt"></i></h3>
-                <p>A revolutionary QGIS plugin designed to create professional thematic maps instantly with a single click. Eliminates complex styling requirements and makes map creation accessible to GIS beginners while offering advanced customization for experts.</p>
-                <p style="font-size: 1.1rem; margin-top: 15px; color: var(--accent-color);">
-                    <b>Simple Workflow:</b> Select Layer → Choose Field → Apply Color Scheme → Generate Professional Map
-                </p>
-                <div class="plugin-features">
-                    <span class="plugin-feature"><i class="fas fa-bolt"></i> Instant Processing</span>
-                    <span class="plugin-feature"><i class="fas fa-palette"></i> Multiple Color Schemes</span>
-                    <span class="plugin-feature"><i class="fas fa-download"></i> Export in Multiple Formats</span>
-                    <span class="plugin-feature"><i class="fas fa-sliders-h"></i> Customizable Legends</span>
+        <a class="plugin-box-link" href="https://oneclick.princesite.in/" target="_blank" rel="noopener">
+            <div class="plugin-box">
+                <div class="plugin-logo-container">
+                    <img src="logo.png" alt="Plugin Logo" class="plugin-logo" 
+                         onerror="this.src='https://cdn-icons-png.flaticon.com/512/3176/3176366.png'">
+                </div>
+                <div class="plugin-content">
+                    <h3>One Click Thematic Map <i class="fas fa-map-marked-alt"></i></h3>
+                    <p>Open the plugin page to explore features, examples, and updates for fast thematic map creation.</p>
+                    <p style="font-size: 1.05rem; margin-top: 12px; color: var(--accent-color);">
+                        Click to visit: oneclick.princesite.in
+                    </p>
+                    <div class="plugin-features">
+                        <span class="plugin-feature"><i class="fas fa-bolt"></i> Instant Processing</span>
+                        <span class="plugin-feature"><i class="fas fa-palette"></i> Multiple Color Schemes</span>
+                        <span class="plugin-feature"><i class="fas fa-sliders-h"></i> Easy Workflow</span>
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>
     </section>
 
     <!-- Projects & Research -->
@@ -989,142 +1055,262 @@
             </div>
             <h2>Projects & Research</h2>
         </div>
-        <div class="card-grid">
-            <!-- Project 1: Groundwater & Borewell Hotspots -->
-            <div class="card project-card">
-                <div class="project-img-container">
-                    <img src="groundwater.jpg" alt="Groundwater Analysis" class="project-img"
-                         onerror="this.src='https://images.unsplash.com/photo-1629731634863-7c706954203e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
-                    <div class="project-overlay">
-                        <div>
-                            <h4 style="color: white; font-size: 1.3rem; margin-bottom: 5px;">Groundwater Depletion Analysis</h4>
-                            <p class="project-tech">QGIS • Spatial Analysis • Hotspot Detection</p>
+        <div class="category-block">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <h3 class="category-title">Research & Environmental GIS Projects</h3>
+            </div>
+            <div class="card-grid">
+                <div class="card project-card">
+                    <div class="project-img-container">
+                        <img src="groundwater.jpg" alt="Groundwater Analysis" class="project-img"
+                             onerror="this.src='https://images.unsplash.com/photo-1629731634863-7c706954203e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        <div class="project-overlay">
+                            <div>
+                                <h4 style="color: white; font-size: 1.3rem; margin-bottom: 5px;">Groundwater Depletion Analysis</h4>
+                                <p class="project-tech">QGIS • Spatial Analysis • Hotspot Detection</p>
+                            </div>
                         </div>
                     </div>
+                    <h3>Groundwater Depletion & Illegal Borewell Hotspots</h3>
+                    <h4>Ongoing Research | Sri Ganganagar</h4>
+                    <p>GIS-based analysis of groundwater depletion patterns and identification of illegal borewell hotspots using thematic mapping, spatial overlay, and hotspot analysis techniques.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">QGIS</span>
+                        <span class="project-tag">Spatial Analysis</span>
+                        <span class="project-tag">Hotspot Mapping</span>
+                        <span class="project-tag">Water Resources</span>
+                    </div>
                 </div>
-                <h3>Groundwater & Borewell Hotspots</h3>
-                <h4>Ongoing Research | Sri Ganganagar</h4>
-                <p>Comprehensive analysis of groundwater depletion patterns using spatial overlay and proximity analysis techniques. Identified illegal borewell hotspots and developed risk assessment models for sustainable water management.</p>
-                <div class="project-tags">
-                    <span class="project-tag">QGIS</span>
-                    <span class="project-tag">Spatial Analysis</span>
-                    <span class="project-tag">Hotspot Mapping</span>
-                    <span class="project-tag">Water Resources</span>
+
+                <div class="card project-card">
+                    <div class="project-img-container">
+                        <img src="temperature.jpg" alt="Temperature Mapping" class="project-img"
+                             onerror="this.src='https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        <div class="project-overlay">
+                            <div>
+                                <h4 style="color: white; font-size: 1.3rem; margin-bottom: 5px;">Temperature Pattern Analysis</h4>
+                                <p class="project-tech">Climate Data • QGIS • Comparative Analysis</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>India Temperature Mapping</h3>
+                    <h4>Comparative Analysis (2020 & 2024)</h4>
+                    <p>Comparative analysis of spatial temperature patterns using QGIS and official climate datasets to understand temporal variation.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Climate Analysis</span>
+                        <span class="project-tag">QGIS</span>
+                        <span class="project-tag">Data Visualization</span>
+                        <span class="project-tag">Time Series</span>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Project 2: Flood Simulation (HEC-RAS) -->
-            <div class="card project-card">
-                <div class="project-img-container">
-                    <img src="flood.jpg" alt="Flood Simulation" class="project-img"
-                         onerror="this.src='https://images.unsplash.com/photo-1547683905-f686c993aee5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
-                    <div class="project-overlay">
-                        <div>
-                            <h4 style="color: white; font-size: 1.3rem; margin-bottom: 5px;">Flood Risk Simulation</h4>
-                            <p class="project-tech">HEC-RAS • DEM Analysis • Risk Modeling</p>
+        <div class="category-block">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-satellite"></i>
+                </div>
+                <h3 class="category-title">Land Use Land Cover (LULC) & Remote Sensing Projects</h3>
+            </div>
+            <div class="card-grid">
+                <div class="card project-card">
+                    <div class="project-img-container">
+                        <img src="lulc.jpg" alt="Satellite LULC" class="project-img"
+                             onerror="this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        <div class="project-overlay">
+                            <div>
+                                <h4 style="color: white; font-size: 1.3rem; margin-bottom: 5px;">Land Use Land Cover Analysis</h4>
+                                <p class="project-tech">Google Earth Engine • LULC • Change Detection</p>
+                            </div>
                         </div>
                     </div>
+                    <h3>Taluka-level LULC Mapping</h3>
+                    <h4>2018–2024 | 10 m Resolution</h4>
+                    <p>Generated multi-year LULC datasets using Google Earth Engine for land cover change detection and trend analysis.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Google Earth Engine</span>
+                        <span class="project-tag">Remote Sensing</span>
+                        <span class="project-tag">LULC Classification</span>
+                        <span class="project-tag">Change Detection</span>
+                    </div>
                 </div>
-                <h3>Flood Simulation (HEC-RAS)</h3>
-                <h4>Yamuna River Analysis</h4>
-                <p>Simulated flood scenarios for different return periods using HEC-RAS software. Visualized risk zones and developed flood inundation maps to support disaster management planning and academic research.</p>
-                <div class="project-tags">
-                    <span class="project-tag">HEC-RAS</span>
-                    <span class="project-tag">Flood Modeling</span>
-                    <span class="project-tag">Risk Analysis</span>
-                    <span class="project-tag">Hydrological Modeling</span>
+
+                <div class="card project-card">
+                    <div class="project-img-container">
+                        <img src="webapp.jpg" alt="LULC Web Application" class="project-img"
+                             onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        <div class="project-overlay">
+                            <div>
+                                <h4 style="color: white; font-size: 1.3rem; margin-bottom: 5px;">Interactive Web GIS Application</h4>
+                                <p class="project-tech">JavaScript • GEE • Data Export</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>LULC Web Application</h3>
+                    <h4>2018–2024 | GEE Web App</h4>
+                    <p>Developed an interactive Google Earth Engine web application with year-wise filters, charts, CSV export, and bilingual interface for LULC change visualization.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Web GIS</span>
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">Data Dashboard</span>
+                        <span class="project-tag">Google Earth Engine API</span>
+                    </div>
+                </div>
+
+                <div class="card project-card">
+                    <div class="project-img-container">
+                        <img src="delhi-lulc.jpg" alt="Delhi LULC" class="project-img"
+                             onerror="this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        <div class="project-overlay">
+                            <div>
+                                <h4 style="color: white; font-size: 1.3rem; margin-bottom: 5px;">Historical LULC Mapping</h4>
+                                <p class="project-tech">Landsat-5 • Supervised Classification</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Delhi LULC Map</h3>
+                    <h4>1987 | Landsat-5</h4>
+                    <p>Prepared a historical LULC map using Landsat-5 imagery and supervised classification techniques in Google Earth Engine.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">LULC</span>
+                        <span class="project-tag">Remote Sensing</span>
+                        <span class="project-tag">Google Earth Engine</span>
+                        <span class="project-tag">Classification</span>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Project 3 -->
-            <div class="card project-card">
-                <div class="project-img-container">
-                    <img src="lulc.jpg" alt="Satellite LULC" class="project-img"
-                         onerror="this.src='https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
-                    <div class="project-overlay">
-                        <div>
-                            <h4 style="color: white; font-size: 1.3rem; margin-bottom: 5px;">Land Use Land Cover Analysis</h4>
-                            <p class="project-tech">Google Earth Engine • Sentinel-2 • Machine Learning</p>
+        <div class="category-block">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-water"></i>
+                </div>
+                <h3 class="category-title">GIS Modelling, Terrain & Hydrological Analysis</h3>
+            </div>
+            <div class="card-grid">
+                <div class="card project-card">
+                    <div class="project-img-container">
+                        <img src="flood.jpg" alt="Flood Simulation" class="project-img"
+                             onerror="this.src='https://images.unsplash.com/photo-1547683905-f686c993aee5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        <div class="project-overlay">
+                            <div>
+                                <h4 style="color: white; font-size: 1.3rem; margin-bottom: 5px;">Flood Risk Simulation</h4>
+                                <p class="project-tech">HEC-RAS • DEM Analysis • Risk Modeling</p>
+                            </div>
                         </div>
                     </div>
+                    <h3>Flood Simulation of Yamuna River</h3>
+                    <h4>HEC-RAS Modelling</h4>
+                    <p>Simulated flood scenarios and visualized flood-risk zones for academic and planning-based analysis.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">HEC-RAS</span>
+                        <span class="project-tag">Flood Modeling</span>
+                        <span class="project-tag">Risk Analysis</span>
+                        <span class="project-tag">Hydrological Modeling</span>
+                    </div>
                 </div>
-                <h3>LULC Analysis (Google Earth Engine)</h3>
-                <h4>Taluka-level Mapping (2018-2024)</h4>
-                <p>Generated multi-year LULC datasets with 10m resolution using Sentinel-2 imagery. Implemented machine learning classification algorithms for accurate land-cover trend analysis and change detection.</p>
-                <div class="project-tags">
-                    <span class="project-tag">Google Earth Engine</span>
-                    <span class="project-tag">Remote Sensing</span>
-                    <span class="project-tag">LULC Classification</span>
-                    <span class="project-tag">Machine Learning</span>
+
+                <div class="card project-card">
+                    <div class="project-img-container">
+                        <img src="terrain.jpg" alt="3D & Contour Mapping" class="project-img"
+                             onerror="this.src='https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        <div class="project-overlay">
+                            <div>
+                                <h4 style="color: white; font-size: 1.3rem; margin-bottom: 5px;">Terrain Modeling</h4>
+                                <p class="project-tech">DEM • Contours • 3D Visualization</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>3D & Contour Mapping Projects</h3>
+                    <h4>Terrain Modeling</h4>
+                    <p>Developed high-resolution terrain models and contour maps using DEM data for spatial and topographical analysis.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">DEM</span>
+                        <span class="project-tag">Contours</span>
+                        <span class="project-tag">3D Mapping</span>
+                        <span class="project-tag">Terrain Analysis</span>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Project 4 -->
-            <div class="card project-card">
-                <div class="project-img-container">
-                    <img src="webapp.jpg" alt="Web Dashboard" class="project-img"
-                         onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
-                    <div class="project-overlay">
-                        <div>
-                            <h4 style="color: white; font-size: 1.3rem; margin-bottom: 5px;">Interactive Web GIS Application</h4>
-                            <p class="project-tech">JavaScript • Leaflet • REST APIs</p>
-                        </div>
-                    </div>
+        <div class="category-block">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-laptop-code"></i>
                 </div>
-                <h3>Interactive LULC Web App</h3>
-                <h4>Web GIS Tool with Analytics</h4>
-                <p>Developed a comprehensive GEE web application featuring time-series filters, interactive charts, and CSV export functionality. Enables stakeholders to visualize land cover changes and make data-driven decisions.</p>
-                <div class="project-tags">
-                    <span class="project-tag">Web GIS</span>
-                    <span class="project-tag">JavaScript</span>
-                    <span class="project-tag">Data Dashboard</span>
-                    <span class="project-tag">Google Earth Engine API</span>
-                </div>
+                <h3 class="category-title">Web, Dashboard & Applied GIS Solutions</h3>
             </div>
-
-            <!-- Project 5 -->
-            <div class="card project-card">
-                <div class="project-img-container">
-                    <img src="temperature.jpg" alt="Temperature Map" class="project-img"
-                         onerror="this.src='https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
-                    <div class="project-overlay">
-                        <div>
-                            <h4 style="color: white; font-size: 1.3rem; margin-bottom: 5px;">Temperature Pattern Analysis</h4>
-                            <p class="project-tech">Climate Data • QGIS • Comparative Analysis</p>
+            <div class="card-grid">
+                <div class="card project-card">
+                    <div class="project-img-container">
+                        <img src="chat.jpg" alt="Real-time Chat" class="project-img"
+                             onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        <div class="project-overlay">
+                            <div>
+                                <h4 style="color: white; font-size: 1.3rem; margin-bottom: 5px;">Real-time Web App</h4>
+                                <p class="project-tech">Browser-based • Rooms • Session Storage</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <h3>India Temperature Mapping</h3>
-                <h4>Comparative Analysis (2020 vs 2024)</h4>
-                <p>Spatial analysis of temperature patterns across India using high-resolution climate datasets. Identified warming trends, regional variations, and created predictive models for climate change impact assessment.</p>
-                <div class="project-tags">
-                    <span class="project-tag">Climate Analysis</span>
-                    <span class="project-tag">QGIS</span>
-                    <span class="project-tag">Data Visualization</span>
-                    <span class="project-tag">Time Series</span>
-                </div>
-            </div>
-
-            <!-- Project 6 -->
-            <div class="card project-card">
-                <div class="project-img-container">
-                    <img src="tourism.jpg" alt="Tourism Map" class="project-img"
-                         onerror="this.src='https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
-                    <div class="project-overlay">
-                        <div>
-                            <h4 style="color: white; font-size: 1.3rem; margin-bottom: 5px;">Tourism Route Mapping Platform</h4>
-                            <p class="project-tech">Web Development • Route Optimization • Interactive Maps</p>
-                        </div>
+                    <h3>Real-time Chat Web Application</h3>
+                    <h4>Session-based Rooms</h4>
+                    <p>Built a browser-based real-time chat application using temporary user IDs and rooms, featuring automatic session-based data removal.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Web App</span>
+                        <span class="project-tag">Real-time</span>
+                        <span class="project-tag">JavaScript</span>
+                        <span class="project-tag">UX</span>
                     </div>
                 </div>
-                <h3>Tourism Route Mapping</h3>
-                <h4>Interactive Web Platform</h4>
-                <p>Created an interactive tourism website featuring day-wise travel routes, tourist locations, and points of interest. Integrated real-time mapping, directions, and location-based services for enhanced user experience.</p>
-                <div class="project-tags">
-                    <span class="project-tag">Web Development</span>
-                    <span class="project-tag">Route Optimization</span>
-                    <span class="project-tag">Interactive Maps</span>
-                    <span class="project-tag">Tourism Planning</span>
+
+                <div class="card project-card">
+                    <div class="project-img-container">
+                        <img src="municipality.jpg" alt="Municipality GIS Dashboard" class="project-img"
+                             onerror="this.src='https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        <div class="project-overlay">
+                            <div>
+                                <h4 style="color: white; font-size: 1.3rem; margin-bottom: 5px;">Municipal Planning Dashboard</h4>
+                                <p class="project-tech">GIS Dashboard • Planning Support</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Municipality GIS Dashboard</h3>
+                    <h4>Spatial Decision Support</h4>
+                    <p>Designed a GIS-based dashboard for municipal planning and spatial decision support using map-based visualization.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Dashboard</span>
+                        <span class="project-tag">Planning</span>
+                        <span class="project-tag">GIS</span>
+                        <span class="project-tag">Visualization</span>
+                    </div>
+                </div>
+
+                <div class="card project-card">
+                    <div class="project-img-container">
+                        <img src="tourism.jpg" alt="Tourism Route Mapping" class="project-img"
+                             onerror="this.src='https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                        <div class="project-overlay">
+                            <div>
+                                <h4 style="color: white; font-size: 1.3rem; margin-bottom: 5px;">Tourism Route Mapping Platform</h4>
+                                <p class="project-tech">Web Development • Route Visualization</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Tourism Website with Day-wise Route Mapping</h3>
+                    <h4>Interactive Web Platform</h4>
+                    <p>Created an interactive tourism web platform displaying day-wise travel routes and tourist locations through map-based navigation.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Web Development</span>
+                        <span class="project-tag">Route Mapping</span>
+                        <span class="project-tag">Interactive Maps</span>
+                        <span class="project-tag">Tourism</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1140,24 +1326,61 @@
         </div>
         <div class="card-grid">
             <div class="card">
-                <h3><i class="fas fa-leaf" style="color: var(--accent-color); margin-right: 10px;"></i> Climate Change & Energy</h3>
-                <h4>The Open University | Jan 2026</h4>
-                <p>Comprehensive understanding of climate science, renewable energy systems, carbon footprint analysis, and sustainability principles for environmental management.</p>
+                <h3><i class="fas fa-leaf" style="color: var(--accent-color); margin-right: 10px;"></i> Climate Change and Renewable Energy</h3>
+                <h4>The Open University (OpenLearn) | Jan 2026</h4>
+                <p>Skills: Climate Change, Environmental Sustainability, Climate Policy, Greenhouse Gases.</p>
             </div>
             <div class="card">
-                <h3><i class="fas fa-bullseye" style="color: var(--accent-color); margin-right: 10px;"></i> Net Zero 101</h3>
+                <h3><i class="fas fa-bullseye" style="color: var(--accent-color); margin-right: 10px;"></i> Net Zero 101: What, Why and How</h3>
                 <h4>United Nations University (UNU-IAS)</h4>
-                <p>Foundational course on net-zero emissions strategies, carbon accounting methodologies, climate policy frameworks, and sustainable development goals.</p>
+                <p>Skills: Environmental Sustainability, Climate Change, Net Zero Strategy.</p>
             </div>
             <div class="card">
-                <h3><i class="fas fa-map" style="color: var(--accent-color); margin-right: 10px;"></i> Foundations of GIS</h3>
+                <h3><i class="fas fa-map" style="color: var(--accent-color); margin-right: 10px;"></i> Foundations of Geographical Information Systems (GIS)</h3>
                 <h4>LinkedIn Learning | March 2025</h4>
-                <p>Core GIS concepts, spatial data management, analysis techniques, cartographic principles, and practical applications using industry-standard tools.</p>
+                <p>Core GIS concepts, spatial data management, and analysis techniques.</p>
             </div>
             <div class="card">
-                <h3><i class="fas fa-satellite-dish" style="color: var(--accent-color); margin-right: 10px;"></i> Geospatial Tech Workshop</h3>
-                <h4>Dr. B.R. Ambedkar College | March 2025</h4>
-                <p>Hands-on workshop covering advanced GIS applications, remote sensing techniques, geospatial data visualization, and practical project implementation.</p>
+                <h3><i class="fas fa-robot" style="color: var(--accent-color); margin-right: 10px;"></i> Building a Personalized Chatbot with OpenAI and LangChain</h3>
+                <h4>LinkedIn Learning | March 2025</h4>
+                <p>Skill-based certification focused on chatbot development workflows.</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-satellite-dish" style="color: var(--accent-color); margin-right: 10px;"></i> Workshop on Applications of Remote Sensing and GIS</h3>
+                <h4>Department of Geography, Dr. Bhim Rao Ambedkar College | 19 Sep 2024</h4>
+                <p>Hands-on training in remote sensing and GIS applications.</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-stethoscope" style="color: var(--accent-color); margin-right: 10px;"></i> Workshop on Geospatial Technology: Applications in Health & Career Opportunities</h3>
+                <h4>Department of Geography, Dr. Bhim Rao Ambedkar College | 4 Mar 2025</h4>
+                <p>Practical exposure to geospatial technology applications and career pathways.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteering -->
+    <section class="section fade-in" id="volunteering">
+        <div class="section-header">
+            <div class="section-icon">
+                <i class="fas fa-handshake-angle"></i>
+            </div>
+            <h2>Volunteering</h2>
+        </div>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Graphic Design, Technical Support & Decoration</h3>
+                <h4>International Conference on Health & Well-Being | April 2025</h4>
+                <p>Designed digital creatives and visual materials for promotions and formal communication. Provided technical support during conference sessions and assisted the organizing team.</p>
+            </div>
+            <div class="card">
+                <h3>Decoration & Graphic Designer</h3>
+                <h4>BHU-CHETNA’25 | April 2025</h4>
+                <p>Contributed to event setup and visual design as part of the Decoration Team.</p>
+            </div>
+            <div class="card">
+                <h3>Graphic Designer</h3>
+                <h4>BHU-CHETNA’24 | February 2024</h4>
+                <p>Designed digital creatives and promotional materials for the annual Geo Fest.</p>
             </div>
         </div>
     </section>
@@ -1174,6 +1397,9 @@
         <a href="https://www.linkedin.com/in/prince-suthar-79552428a" target="_blank" class="social-link" title="LinkedIn">
             <i class="fab fa-linkedin-in"></i>
         </a>
+        <a href="https://www.upwork.com/freelancers/~01ea0fa9615ea38b33?mp_source=share" target="_blank" class="social-link" title="Upwork">
+            <i class="fab fa-upwork"></i>
+        </a>
         <a href="https://github.com/sutharprin098" target="_blank" class="social-link" title="GitHub">
             <i class="fab fa-github"></i>
         </a>
@@ -1186,7 +1412,7 @@
     </div>
     
     <div class="copyright">
-        <p>© 2026 Prince | GIS Analyst & Developer | Delhi, India</p>
+        <p>© 2026 Prince | GIS Analyst | WebApp Creator | Graphic Designer</p>
         <p style="margin-top: 15px; font-size: 0.9rem;">Built with <i class="fas fa-heart" style="color: var(--accent-color);"></i> using modern web technologies</p>
         <p style="margin-top: 10px; font-size: 0.85rem; opacity: 0.7;">Phone: +91-9509706699 | Email: prince@bramb.du.ac.in</p>
     </div>
